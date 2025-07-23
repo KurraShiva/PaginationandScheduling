@@ -1,70 +1,57 @@
-📦 Product Inventory with Pagination, Sorting, and File Import
-🔍 Goal
-Build a Product Management System with advanced data handling using Spring Boot, Spring Data JPA, and MySQL.
+# 📦 Product Inventory with Pagination, Sorting, and File Import
 
-✅ Features
-Spring Boot + MySQL + Spring Data JPA
+## 🔍 Goal
+Build a **Product Management System** with advanced data handling using Spring Boot, Spring Data JPA, and MySQL.
 
-Set up a full-fledged backend application.
+---
 
-Entity: Product with fields:
-id, name, price, quantity, category
+## ✅ Features
 
-CRUD APIs with Pagination and Sorting
+1. **Spring Boot + MySQL + Spring Data JPA**  
+   - Set up a full-fledged backend application.  
+   - Entity: `Product` with fields:  
+     `id`, `name`, `price`, `quantity`, `category`
 
-Supports GET, POST, PUT, and DELETE operations.
+2. **CRUD APIs with Pagination and Sorting**  
+   - Supports `GET`, `POST`, `PUT`, and `DELETE` operations.  
+   - Integrated `Pageable` interface to handle large data sets efficiently.  
+   - Allows sorting by fields such as `price`, `quantity`, etc.
 
-Integrated Pageable interface to handle large data sets efficiently.
+3. **Filtering Support**  
+   - Filter products by `category` or `price range`.  
+   - Uses Spring JPA Specifications or Criteria API for dynamic querying.
 
-Allows sorting by fields such as price, quantity, etc.
+4. **CSV Bulk Import**  
+   - Upload `.csv` file to import products in bulk via REST endpoint.  
+   - Uses `MultipartFile` + `Apache Commons CSV` (or `OpenCSV`).
 
-Filtering Support
+5. **Scheduled Job (Inventory Alert)**  
+   - Scheduled task (`@Scheduled`) runs daily.  
+   - Generates a summary of **low-stock products**.  
+   - Stores summary in DB or logs output.
 
-Filter products by category or price range.
+6. **Auditing with JPA**  
+   - Tracks `createdAt` and `updatedAt` using **JPA Auditing**.  
+   - Auto-populated during insert/update.
 
-Uses Spring JPA Specifications or Criteria API for dynamic querying.
+---
 
-CSV Bulk Import
+## 🛠️ Tech Stack
 
-Upload .csv file to import products in bulk via REST endpoint.
+- Java 17+  
+- Spring Boot  
+- Spring Data JPA  
+- MySQL  
+- Apache Commons CSV / OpenCSV  
+- JPA Auditing  
+- Spring Scheduler  
+- Postman (for API testing)
 
-Uses MultipartFile + Apache Commons CSV (or OpenCSV).
+---
 
-Scheduled Job (Inventory Alert)
+## 🚀 How to Run
 
-Scheduled task (@Scheduled) runs daily.
-
-Generates a summary of low-stock products.
-
-Stores summary in DB or logs output.
-
-Auditing with JPA
-
-Tracks createdAt and updatedAt using JPA Auditing.
-
-Auto-populated during insert/update.
-
-🛠️ Tech Stack
-Java 17+
-
-Spring Boot
-
-Spring Data JPA
-
-MySQL
-
-Apache Commons CSV / OpenCSV
-
-JPA Auditing
-
-Spring Scheduler
-
-Postman (for API testing)
-
-🚀 How to Run
-bash
-Copy
-Edit
+```bash
 # Clone the repo
 git clone https://github.com/KurraShiva/PaginationandScheduling.git
 
@@ -75,10 +62,3 @@ git clone https://github.com/KurraShiva/PaginationandScheduling.git
 # Update application.properties with DB credentials
 
 # Run the Spring Boot Application
-📂 Sample CSV Format
-csv
-Copy
-Edit
-id,name,price,quantity,category
-1,Mouse,499.00,20,Electronics
-2,Keyboard,899.00,15,Electronics
