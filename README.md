@@ -62,3 +62,33 @@ git clone https://github.com/KurraShiva/PaginationandScheduling.git
 # Update application.properties with DB credentials
 
 # Run the Spring Boot Application
+
+
+
+
+📂 Sample CSV Format
+csv
+Copy
+Edit
+id,name,price,quantity,category
+1,Mouse,499.00,20,Electronics
+2,Keyboard,899.00,15,Electronics
+yaml
+Copy
+Edit
+
+**Then save the file:**
+- Press `Ctrl + O` → `Enter` to save
+- Press `Ctrl + X` to exit
+
+---
+
+**2. Add, commit, and push the file:**
+
+```bash
+git add README.md
+git commit -m "Added README with project overview"
+git push origin main
+✅ Done! Your GitHub repo will now have a README.md with all the project info.
+
+Check: https://github.com/KurraShiva/PaginationandScheduling
